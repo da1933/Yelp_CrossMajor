@@ -1,3 +1,12 @@
+# The final project of DS-GA 1007
+# NYU Center for Data Science
+# Authors: Jiaming Dong (jd3405@nyu.edu)
+#          Daniel Amaranto (da1933@nyu.edu)
+#          Julie Cachia (jyc436@nyu.edu)
+#
+# The function to load user data
+
+
 import json
 import pandas as pd
 
