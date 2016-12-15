@@ -24,9 +24,14 @@ Business | User
 
 ## Getting Started
 
-Beginning with Github (https://github.com/djasmine/Yelp_CrossMajor), clone the directory using this link: https://github.com/djasmine/Yelp_CrossMajor.git
+From [Github](https://github.com/djasmine/Yelp_CrossMajor), clone the directory by entering the following into your Terminal command line:
+```
+git clone https://github.com/djasmine/Yelp_CrossMajor.git
+```
 
-Into your Terminal command line, enter the following: 
+You should now see a folder titled "Yelp_CrossMajor" in your main directory. Into this folder, please place two data files titled "yelp_academic_dataset_business.json" and "yelp_academic_dataset_user.json". These two files can be downloaded from the NYU Drive via this public link: https://drive.google.com/drive/folders/0BxE-hoN6fsxXVHNPVVhFOVRKLVE?usp=sharing
+
+Once you have the two json data files in your cloned Yelp_CrossMajor folder, go to your Terminal command line and enter the following: 
 
 ```
 cd ./Yelp_CrossMajor
