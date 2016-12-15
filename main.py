@@ -15,21 +15,16 @@ from my_yelp_business import MyYelpBusiness
 from my_yelp_user import MyYelpUser
 from my_plot import MyPloter
 from errors import *
+from messages import *
 
 
 def main():
     print("Loading data...")
-    path = "/Users/JiamingDong/Downloads/yelp/"
-    path_business = path + "yelp_academic_dataset_business.json"
-    path_user = path + "yelp_academic_dataset_user.json"
+    path = r"C:\Users\da1933\Desktop\code"
+    path_business = path + "\yelp_academic_dataset_business.json"
+    path_user = path + "\yelp_academic_dataset_user.json"
     my_yelp = MyPloter(business_data=MyYelpBusiness(load_business_data(path_business)),
                        user_data=MyYelpUser(load_user_data(path_user)))
-
-    inputErrorMessage = "\nThis program takes three inputs.\n 1) Choose 'user' or 'business'\n" + \
-                        "2) Choose a feature from the instructions.\n" + \
-                        " 3) Choose one of these star level to analyze:\n" + \
-                        "    1   1.5   2   2.5   3   3.5   4   4.5   5\n" + \
-                        " E.g. 'business prices 2.5'\nType 'features' for more information."
 
     while True:
         try:
@@ -39,6 +34,10 @@ def main():
         try:
             if t_input == 'finish':
                 break
+            elif t_input == 'business':
+                    print(business_features)
+            elif t_input == 'user':
+                    print(user_features)
             else:
                 tokens = t_input.split(' ')
                 if len(tokens) == 3:

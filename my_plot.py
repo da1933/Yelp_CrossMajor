@@ -8,6 +8,8 @@
 
 
 import matplotlib.pyplot as plt
+import pandas as pd
+import seaborn
 from errors import *
 
 
@@ -23,6 +25,7 @@ class MyPloter:
         self.user_hist = ["review_count"]
         # the user data attributes which are plotted in pie
         self.user_pie = ["yelping_since"]
+        self.user_box = ["votedFunny", "votedCool", "votedUseful", "fans"]
         self.title = ""
 
     def plot(self, plot_type, plot_attribute, star_start, star_end=None):
@@ -51,11 +54,14 @@ class MyPloter:
                 # for histogram graph, we use list
                 data_to_plot = self.user_data.get_data_range(plot_attribute, star_start, star_end)
                 self.plot_hist(data_to_plot)
+            elif plot_attribute in self.user_box:
+                data_to_plot = self.user_data.get_data_range(plot_attribute, star_start, star_end)
+                self.plot_box(data_to_plot)
             else:
                 if plot_attribute in self.user_pie:
                     # for pie graph, we use series
                     data_to_plot = self.user_data.get_series_range(plot_attribute, star_start, star_end)
-                    self.plot_pie(data_to_plot)
+                    self.plot_pie(pd.Series(data_to_plot))
                 else:
                     raise AttributeNotFoundException
 
@@ -64,7 +70,12 @@ class MyPloter:
         plt.hist(data)
         plt.title(self.title)
         plt.show()
-
+    
+    def plot_box(self,data):
+        plt.boxplot(data, showfliers=False)
+        plt.title(self.title)
+        plt.show()
+        
     def plot_pie(self, data):
         """plot a pie graph with pandas.Series"""
         data.plot(kind='pie')
