@@ -11,9 +11,9 @@ Business | User
 --- | --- | 
 `reservations`: Whether or not the business takes reservations| `review_count`: The number of reviews a user has posted
 `delivery`: Whether or not the business delivers | `yelping_since`: The year the user started yelping
-`credit_cards`: Whether or not the business accepts credit cards | `voted_useful`: The number of times the user's reviews have been voted useful by other users
-`states`: The state in which this business is located | `voted_funny`: The number of times the user's reviews have been voted funny by other users
-`cities`: The city in which this business is located | `voted_cool`: The number of times the user's reviews have been voted cool by other users
+`credit_cards`: Whether or not the business accepts credit cards | `votedUseful`: The number of times the user's reviews have been voted useful by other users
+`states`: The state in which this business is located | `votedFunny`: The number of times the user's reviews have been voted funny by other users
+`cities`: The city in which this business is located | `votedCool`: The number of times the user's reviews have been voted cool by other users
 `common_categories`: Business category (e.g., nightlife, fast food)| 
 `review_count`: The number of reviews the business received | 
 `prices`: The price category of the business |
