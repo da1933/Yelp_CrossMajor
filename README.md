@@ -11,12 +11,12 @@ Business | User
 --- | --- | 
 `reservations`: Whether or not the business takes reservations| `review_count`: The number of reviews a user has posted
 `delivery`: Whether or not the business delivers | `yelping_since`: The year the user started yelping
-`credit_cards`: Whether or not the business accepts credit cards | 
-`states`: The state in which this business is located | 
-`cities`: The city in which this business is located | 
+`credit_cards`: Whether or not the business accepts credit cards | `voted_useful`: The number of times the user's reviews have been voted useful by other users
+`states`: The state in which this business is located | `voted_funny`: The number of times the user's reviews have been voted funny by other users
+`cities`: The city in which this business is located | `voted_cool`: The number of times the user's reviews have been voted cool by other users
 `common_categories`: Business category (e.g., nightlife, fast food)| 
 `review_count`: The number of reviews the business received | 
-`prices`: The price category of the business | 
+`prices`: The price category of the business |
 
 
 * For each of the **businesses**, the average star rating (1-5) refers to the average rating they *received*.
@@ -53,7 +53,7 @@ ___
 ```
 business delivery 3
 ```
-The above input will generate a pie chart representing the proportion of business with an average star rating of 3 that deliver ("True") or don't deliver ("Fales").
+The above input will generate a pie chart representing the proportion of businesses with an average star rating of 3 that deliver ("True") or don't deliver ("False").
 
 ![Sample Output](https://dl.dropboxusercontent.com/u/105303727/Business%20Delivery.png "Business Delivery")
 
@@ -77,7 +77,6 @@ ___
 * **Daniel Amaranto** - *da1933@nyu.edu*
 * **Jiaming Dong** - *jd3405@nyu.edu*
 * **Julie Cachia** - *jyc436@nyu.edu*
-
 
 
 
