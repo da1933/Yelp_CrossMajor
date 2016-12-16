@@ -20,9 +20,9 @@ from messages import *
 
 def main():
     print("Loading data...")
-    path = r"C:\Users\da1933\Desktop\code"
-    path_business = path + "\yelp_academic_dataset_business.json"
-    path_user = path + "\yelp_academic_dataset_user.json"
+    path = ""
+    path_business = path + "yelp_academic_dataset_business.json"
+    path_user = path + "yelp_academic_dataset_user.json"
     my_yelp = MyPloter(business_data=MyYelpBusiness(load_business_data(path_business)),
                        user_data=MyYelpUser(load_user_data(path_user)))
 

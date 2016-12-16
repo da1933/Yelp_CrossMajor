@@ -14,10 +14,10 @@ import pandas as pd
 class MyYelpUser:
     def __init__(self, user):
         self.user = user
-        self.process_yelping_since()
-        self.process_review_count()
+        self._process_yelping_since()
+        self._process_review_count()
 
-    def process_yelping_since(self):
+    def _process_yelping_since(self):
         """transfer the yelping since into year"""
         for i in range(0, 9):
             yelp_since = []
@@ -25,7 +25,7 @@ class MyYelpUser:
                 yelp_since.append(int(j[:4]))
             self.user[i]['yelping_since'] = pd.Series(data=yelp_since).value_counts()
 
-    def process_review_count(self):
+    def _process_review_count(self):
         """transfer the review count into value counts"""
         for i in range(0, 9):
             self.user[i]["review_count"] = self.user[i]["review_count"].value_counts()

@@ -14,9 +14,9 @@ import pandas as pd
 class MyYelpBusiness:
     def __init__(self, business):
         self.business = business
-        self.preprocessing()
+        self._preprocessing()
 
-    def preprocessing(self):
+    def _preprocessing(self):
         """transfer the lists into value counts"""
         for i in range(0, 9):
             self.business[i]["reservations"] = pd.Series(data=self.business[i]["reservations"]).value_counts()
