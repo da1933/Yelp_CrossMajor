@@ -11,12 +11,12 @@ Business | User
 --- | --- | 
 `reservations`: Whether or not the business takes reservations| `review_count`: The number of reviews a user has posted
 `delivery`: Whether or not the business delivers | `yelping_since`: The year the user started yelping
-`credit_cards`: Whether or not the business accepts credit cards | 
-`states`: The state in which this business is located | 
-`cities`: The city in which this business is located | 
+`credit_cards`: Whether or not the business accepts credit cards | `votedUseful`: The number of times the user's reviews have been voted useful by other users
+`states`: The state in which this business is located | `votedFunny`: The number of times the user's reviews have been voted funny by other users
+`cities`: The city in which this business is located | `votedCool`: The number of times the user's reviews have been voted cool by other users
 `common_categories`: Business category (e.g., nightlife, fast food)| 
 `review_count`: The number of reviews the business received | 
-`prices`: The price category of the business | 
+`prices`: The price category of the business |
 
 
 * For each of the **businesses**, the average star rating (1-5) refers to the average rating they *received*.
@@ -24,9 +24,14 @@ Business | User
 
 ## Getting Started
 
-Beginning with Github (https://github.com/djasmine/Yelp_CrossMajor), clone the directory using this link: https://github.com/djasmine/Yelp_CrossMajor.git
+From [Github](https://github.com/djasmine/Yelp_CrossMajor), clone the directory by entering the following into your Terminal command line:
+```
+git clone https://github.com/djasmine/Yelp_CrossMajor.git
+```
 
-Into your Terminal command line, enter the following: 
+You should now see a folder titled "Yelp_CrossMajor" in your main directory. Into this folder, please place two data files titled "yelp_academic_dataset_business.json" and "yelp_academic_dataset_user.json". These two files can be downloaded from the NYU Drive via this public link: https://drive.google.com/drive/folders/0BxE-hoN6fsxXVHNPVVhFOVRKLVE?usp=sharing
+
+Once you have the two json data files in your cloned Yelp_CrossMajor folder, go to your Terminal command line and enter the following: 
 
 ```
 cd ./Yelp_CrossMajor
@@ -53,7 +58,7 @@ ___
 ```
 business delivery 3
 ```
-The above input will generate a pie chart representing the proportion of business with an average star rating of 3 that deliver ("True") or don't deliver ("Fales").
+The above input will generate a pie chart representing the proportion of businesses with an average star rating of 3 that deliver ("True") or don't deliver ("False").
 
 ![Sample Output](https://dl.dropboxusercontent.com/u/105303727/Business%20Delivery.png "Business Delivery")
 
@@ -77,7 +82,6 @@ ___
 * **Daniel Amaranto** - *da1933@nyu.edu*
 * **Jiaming Dong** - *jd3405@nyu.edu*
 * **Julie Cachia** - *jyc436@nyu.edu*
-
 
 
 
