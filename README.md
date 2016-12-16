@@ -74,6 +74,12 @@ The above input will generate a pie chart representing when users who gave avera
 ___
 In order to exit the program, simply enter `finish` into the command line.
 
+## Running Tests
+
+To run unit tests, type the following into your command line:
+```
+python unit_tests.py
+```
 
 ___
 
@@ -84,8 +90,3 @@ ___
 * **Julie Cachia** - *jyc436@nyu.edu*
 
 
-
-
-```python
-
-```
